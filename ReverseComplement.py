@@ -1,13 +1,11 @@
 def main(sequence='', bracket_type=''):
-    
-  
+
     print('\nReverse Complement Tool')       
     sequence = input('Input your sequence: ')
 
     #Close program if there is no input
     if sequence == '':
-        return
-   
+        return  
    
     #Dictionary with convertion key
     aminoacid_complement = {
@@ -21,7 +19,7 @@ def main(sequence='', bracket_type=''):
     valid = ['A', 'T', 'C', 'G']
     for aa in sequence:
         if aa not in valid:
-            return print('Invalid aminoacid!')
+            return print(f'Invalid aminoacid!\n--------------------'), main()
     
     #Create complement
     complement = []
