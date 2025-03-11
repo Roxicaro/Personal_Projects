@@ -4,6 +4,11 @@ def main(sequence='', bracket_type=''):
     print('\nReverse Complement Tool')       
     sequence = input('Input your sequence: ')
 
+    #Close program if there is no input
+    if sequence == '':
+        return
+   
+   
     #Dictionary with convertion key
     aminoacid_complement = {
         'A':'T',
@@ -26,6 +31,6 @@ def main(sequence='', bracket_type=''):
     #Reverse complement
     reverse_complement = ''.join(complement[::-1])
     
-    return print(f"\nInput: {sequence}\nReverse complement: {reverse_complement}")
+    return print(f"\nInput: {sequence}\nReverse complement: {reverse_complement}\n--------------------"), main()
        
 main()
